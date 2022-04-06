@@ -1,3 +1,5 @@
+const randomNo = (max = 255, min = 0) => Math.round(Math.random() * (max - min) + min)
+
 class Calculator {
 	constructor (previousOperandTextElement, currentOperandTextElement) {
 		this.previousOperandTextElement = previousOperandTextElement
@@ -93,8 +95,12 @@ const allClearButton = document.querySelector('[data-all-clear]')
 const deleteButton = document.querySelector('[data-delete]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
+// const name = document.querySelector('[catalyst]')
 
- 
+setInterval (() => {
+	document.querySelector('[catalyst]').style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
+},1000)
+
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 numberButtons.forEach(button => {
