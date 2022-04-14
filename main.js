@@ -95,10 +95,22 @@ const allClearButton = document.querySelector('[data-all-clear]')
 const deleteButton = document.querySelector('[data-delete]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
-// const name = document.querySelector('[catalyst]')
+
 
 setInterval (() => {
 	document.querySelector('[catalyst]').style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
+},1000)
+
+// setInterval (() => {
+// 	document.querySelector('[data-delete]').style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
+// },1000)
+
+// setInterval (() => {
+// 	document.querySelector('[data-operation]').style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
+// },1000)
+
+setInterval (() => {
+	document.querySelectorAll(button).style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
 },1000)
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
